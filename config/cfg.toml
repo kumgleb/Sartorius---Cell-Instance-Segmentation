@@ -1,0 +1,20 @@
+wandb_logging = true
+seed = 123
+img_size = [224, 224]
+
+[model]
+backbone = 'resnet50'
+decoder_channels = [2048, 1024, 512, 256, 64]
+n_classes = 2
+retain_dim = true
+out_size = [224, 224]
+
+[train]
+lr = 1e-3
+n_iter = 50000
+n_iter_val = 50
+bs = 16
+save_best_val = true
+plot_mode = false
+clip_grad = true
+checkpoint_path = './weights'
